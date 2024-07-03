@@ -241,7 +241,65 @@ svg path {
 .loader_dot {
   width: 10px;
   height: 10px;
-  background-color: black;
+  background-color: rgb(70, 163, 88);
+  border-radius: 5px;
+  animation-name: move, color, opacity;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(-10px);
+  }
+  66% {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes color {
+  from {
+    background-color: rgb(70, 163, 88);
+  }
+  to {
+    background-color: rgb(251, 251, 251);
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.loader_dot:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.loader_dot:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.loader_dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.loader_dot:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.loader_dot:nth-child(5) {
+  animation-delay: 1s;
 }
 
 .flexwrap {
